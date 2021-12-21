@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: var(--section-background);
+    color: #24343F;
+
+
+}
+
+
+
+:root {
+    font-size: 100%;
+    font-size: 16px;
+    line-height: 1.5;
+    --main-color: #121212;
+    --first-color: #0CA7AA;
+    --secondary-color: #FFAB11;
+    --third-color: #E61946;
+    --forth-color: #AA2891;
+    --fith-color: #502D8C;
+    --writing-color: #24343F;
+    --section-background: #f6f6f6;
+    --primary-blue: #233975;
+    --section-padding: 30px;
+    --color-1: #9CD5E6;
+    --color-2: #B9ACD7;
+    --color-3: #FFB8BC;
+    --color-4: #9FE1E0;
+    --color-5: #F4DE4D;
+    --color-6: #E9E5E1;
+    --color-7: ;
+    --color-8: ;
+}
+
+
+.container {
+    margin: auto;
+    padding: 0 25px;
+
+}
+
+
+
+
+@media(min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media(min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media(min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/*start header */
+.header {
+    content: "";
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .logo {
+    width: 200px;
+    height: 80px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.header .nav {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 200px);
+    align-items: center;
+
+}
+
+.header .nav .links {
+    display: flex;
+    justify-content: center;
+
+}
+
+.header .nav .links ul {
+    display: flex;
+    list-style: none;
+}
+
+.header .nav .links ul li {
+    margin: 0 20px;
+
+
+}
+
+.header .nav .links ul a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--primary-blue);
+}
+
+.header .nav .links a i {
+    margin-left: 5px;
+}
+
+
+/*end header */
+/*start main */
+main .container {
+    display: flex;
+}
+
+main .right {
+    padding-top: 30px;
+    width: 200px;
+
+}
+
+@media (max-width:750px) {
+    main .container {
+        flex-direction: column;
+    }
+
+    main .right {
+        width: 100%;
+        order: 2;
+        display: flex;
+    }
+
+    main .right .links ul {
+        display: inline-flex;
+    }
+
+    main .right .links ul a i {
+        display: block;
+    }
+
+    main .right .links span {
+        font-size: 0.5rem;
+
+    }
+
+    main .left {
+        width: 100%;
+    }
+}
+
+.right .links ul li {
+    list-style: none;
+    padding: 7px 0;
+    width: fit-content;
+
+}
+
+.right .links ul li a {
+    text-decoration: none;
+    color: var(--primary-blue);
+    display: block;
+    padding: 5px 12px 5px 12px;
+
+}
+
+.right .links ul li :hover, .active {
+    background-color: #fff;
+
+    border-radius: 20px;
+    font-weight: bold;
+
+}
+
+.right .links a i {
+    margin-left: 20px;
+}
+
+main .left {
+    width: calc(100% - 200px);
+    padding-top: var(--section-padding);
+}
+
+main .left .items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+
+    gap: 10px;
+}
+
+main .left .items .item-bx {
+
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+}
+
+main .left .items .item-bx .item {
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    color: var(--primary-blue);
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    padding: 10px;
+
+}
+
+main .left .items .item-bx.col {
+    flex-direction: row;
+}
+
+main .left .items .item-bx.col>.item {
+    width: 100%;
+    height: 260px;
+
+
+}
+
+main .left .items .item-bx.col>.item img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+}
+
+main .left .items .item-bx.col>.item .text {
+    position: absolute;
+    
+    z-index: 1;
+}
+
+main .left .items .item-bx.row {
+    flex-direction: column;
+}
+
+main .left .items .item-bx.row>.item {
+    width: 100%;
+    height: 125px;
+
+}
+
+main .left .items .item-bx .item:nth-child(3n+1) {
+    background-color: var(--color-1);
+}
+
+main .left .items .item-bx .item:nth-child(3n+2) {
+    background-color: var(--color-2);
+}
+
+main .left .items .item-bx .item:nth-child(3n+3) {
+    background-color: var(--color-3);
+}
